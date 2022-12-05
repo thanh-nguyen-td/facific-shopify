@@ -1,0 +1,26 @@
+:root {
+    --color-announcement-bg: #3d3b32;
+    --color-announcement: #e6dec1;
+
+    --color-head: #cfbb99;
+    --color-head-bg: #222;
+
+    --color-orange: #d66a25;
+    --color-black: #222;
+    --color-black-100: #555;
+    --color-white:#fff;
+
+    --font-xs:12px;
+    --font-sm:14px;
+    --font-base:17px;
+
+    --font-family-1:"Futura";
+    --font-family-2:"Open-Sans-Condensed";
+    --font-family-3:"ITC Berkeley Old Style";
+}
+a {
+    text-decoration: none;
+}
+.title-lg {
+    font-size: 19px;
+}

@@ -1,0 +1,32 @@
+{% style %}
+  .announcement-container {
+    background:var(--color-announcement-bg);
+    font-family:var(--font-family-3);
+    font-size:var(--font-sm);
+    padding:1.14em;
+    text-align:center;
+  }
+  .announcement-container a {
+    color:var(--color-announcement);
+  }
+  .announcement-container a:hover {
+    color:var(--color-announcement);
+  }
+{% endstyle %}
+<div class="announcement-container" >
+    <a href="{{ section.settings.url }}">{{ section.settings.text }}</a>
+  </div>
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "settings":[
+    {
+      "type":"text",
+      "id":"text",
+      "label":"Text",
+      "default":"Hello"
+    }
+  ]
+}
+{% endschema %}
