@@ -7,12 +7,12 @@
 .custom-row {
     display: flex;
     flex-wrap: wrap;
-    margin-left:-4px;
-    margin-right:-4px;
+    margin-left:-18px;
+    margin-right:-18px;
 }
 .custom-col {
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 18px;
+    padding-right: 18px;
 }
     .col-xl-1,
     .col-xl-2,
@@ -43,6 +43,7 @@
 .col-xl-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%;
+   
 }
 
 .col-xl-3 {
@@ -262,6 +263,10 @@
     .custom-row {
         margin-left:-8px;
         margin-right:-8px;
+    }
+    .custom-col {
+        padding-left: 8px;
+        padding-right: 8px;
     }
     .col-sm-1,
     .col-sm-2,
