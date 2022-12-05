@@ -1,10 +1,50 @@
-<div>
-    <div>
-      image ưith tẽt
+{% style %}
+.custom-image-text {
+  padding-top:5rem;
+}
+  .text-img_order {
+    order:2
+  }
+  .custom-image-text img {
+    height:100% ;
+  }
+  .custom-image-text .wrap-text h2{
+    font-size:33px;
+    font-weight:700;
+    text-transform:uppercase;
+    font-family:var(-font-family-1)
+    }
+  .custom-image-text .wrap-text p{
+    font-size:17px;
+    font-weight:400;
+    font-family:var(--font-family-3)
+    }
+  
+  @media screen and (max-width:1200px) {
+    .custom-image-text img {
+    height:auto ;
+    width:100%
+  }
+  .custom-image-text .wrap-img {
+    display:flex;
+    align-items:center
+    }
+  }
+{% endstyle %}
+<div class="custom-image-text page-width">
+  <div class="custom-grid">
+    <div class="custom-row ">
+      <div class="wrap-img custom-col col-lg-6 custom-col-12 col-xl-6 {% unless section.settings.first_img %}text-img_order {% endunless %}">
+        <img  class="{% if section.settings.first_img %} width-full {% endif %}" src="{{section.settings.image | img_url:'large'}}" width="auto" height="auto" loading="lazy"/>
+      </div>
+      <div class="custom-col col-lg-6 custom-col-6 col-xl-6 custom-col-12">
+        <div class="wrap-text">
+          <h2>{{ section.settings.title }}</h2>
+        <p>{{ section.settings.des }}</p>
+        </div>
+      </div>
     </div>
-    <div>
-
-    </div>
+  </div>
 </div>
 {% schema %}
 {

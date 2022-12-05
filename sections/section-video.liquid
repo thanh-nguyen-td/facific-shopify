@@ -1,0 +1,42 @@
+<div>
+    <img src="https://cdn.shopify.com/s/files/1/0691/4749/files/mill_87a06a5a-6570-43c5-946f-02db0a85aa51_1708x854.jpg?v=1613538904"/>
+    <div>
+        <iframe src="https://player.vimeo.com/video/771124484?h=c3a6904a82" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/771124484">Finding Hetch Hetchy: The Hidden Yosemite</a> from <a href="https://vimeo.com/user6200483">Restore Hetch Hetchy</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+    </div>
+</div>
+{% schema %}
+{
+    "name":"Section video",
+    "settings":[
+      {
+        "type": "text",
+        "id": "title",
+        "default": "QUALITY CRAFTSMANSHIP",
+        "label": "Title"
+      },
+    //   {
+    //   "type": "video_url",
+    //   "id": "video_url",
+    //   "accept": [
+    //     "youtube",
+    //     "vimeo"
+    //   ],
+    //   "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+    //   "label": "t:sections.video.settings.video_url.label",
+    //   "placeholder": "t:sections.video.settings.video_url.placeholder",
+    //   "info": "t:sections.video.settings.video_url.info"
+    // },
+      {
+      "type": "image_picker",
+      "id": "image",
+      "label": "select_img"
+      }
+    ],
+    "presets":[
+        {
+            "name":"Section video"
+        }
+      ]
+}
+{% endschema %}

@@ -24,3 +24,10 @@ a {
 .title-lg {
     font-size: 19px;
 }
+
+.width-full{
+    width: 100%;
+}
+.height-full{
+    height: 100%;
+}
