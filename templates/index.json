@@ -52,6 +52,12 @@
         "des": "<p>Made by the water-haters at Ventile as a luggage-weight variety of their classic weather-proof cotton, and honed again and again until deemed fit to bear the company hallmark. Equivalent in heft to 15oz canvas and woven with the same top percentile of extra-long-staple cotton fibres with which the Ventile name has, since the 1940s, been built.<\/p>",
         "image": "shopify:\/\/shop_images\/bugatti-eb110-veyron-and-chiron-in-dubai-7.jpg"
       }
+    },
+    "9dd01656-1ab2-461e-905c-44e44c765cc4": {
+      "type": "section-video",
+      "settings": {
+        "title": "QUALITY CRAFTSMANSHIP"
+      }
     }
   },
   "order": [
@@ -59,6 +65,7 @@
     "119a558f-e8d3-4f56-b842-578858766985",
     "df99977e-a947-4686-8136-f393c70a3887",
     "48c62518-5207-454e-8309-4efd7b387c3d",
-    "f51a877e-9e36-428c-8606-9efc68af63ae"
+    "f51a877e-9e36-428c-8606-9efc68af63ae",
+    "9dd01656-1ab2-461e-905c-44e44c765cc4"
   ]
 }
