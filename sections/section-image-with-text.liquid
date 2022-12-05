@@ -1,0 +1,45 @@
+<div>
+    <div>
+      image ưith tẽt
+    </div>
+    <div>
+
+    </div>
+</div>
+{% schema %}
+{
+    "name":"Section image with text",
+    "class":"demo-class",
+    "settings":[
+      {
+        "type": "checkbox",
+        "id": "first_img",
+        "default": true,
+        "label": "First image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "default": "MADE IN THE WORKSHOP",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "des",
+        "default": "<p>this is des</p>",
+        "label": "Description"
+      },
+      {
+      "type": "image_picker",
+      "id": "image",
+      "label": "select_img"
+      }
+    ],
+    "presets":[
+        {
+            "category":"Collection",
+            "name":"Feature Collection"
+        }
+      ]
+}
+{% endschema %}
