@@ -153,6 +153,24 @@
       "settings": {
         "blog": "news"
       }
+    },
+    "ed5441f7-9281-44e3-a7bc-a69c905cfbf4": {
+      "type": "section-banner",
+      "blocks": {
+        "0060b034-49ef-4cd0-9215-7920ef5db7c6": {
+          "type": "text",
+          "settings": {
+            "des": "<p>This is Des<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "0060b034-49ef-4cd0-9215-7920ef5db7c6"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/map_960x600_crop_center_043fa208-095d-4622-a7b8-150fec714548.jpg",
+        "title": "WORKSHOP"
+      }
     }
   },
   "order": [
@@ -165,6 +183,7 @@
     "1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea",
     "3b222a5a-e778-4cc6-b12d-6d7a0e9e8483",
     "473f5822-3260-41ac-9759-b993014cf4f6",
-    "de9d5cf8-4bab-4c59-ba88-00c1bdf33863"
+    "de9d5cf8-4bab-4c59-ba88-00c1bdf33863",
+    "ed5441f7-9281-44e3-a7bc-a69c905cfbf4"
   ]
 }
