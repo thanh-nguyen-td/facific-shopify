@@ -123,6 +123,13 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "3b222a5a-e778-4cc6-b12d-6d7a0e9e8483": {
+      "type": "section-detail-product",
+      "settings": {
+        "collection": "",
+        "product": "bugatti"
+      }
     }
   },
   "order": [
@@ -132,6 +139,7 @@
     "48c62518-5207-454e-8309-4efd7b387c3d",
     "f51a877e-9e36-428c-8606-9efc68af63ae",
     "9dd01656-1ab2-461e-905c-44e44c765cc4",
-    "1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea"
+    "1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea",
+    "3b222a5a-e778-4cc6-b12d-6d7a0e9e8483"
   ]
 }
