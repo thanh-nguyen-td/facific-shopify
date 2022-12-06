@@ -443,7 +443,7 @@
           </a>
         </div>
       </div>
-      {%- if section.settings.media_position == 'right' -%}
+      {%- comment -%} {%- if section.settings.media_position == 'right' -%}
         <div class="grid__item product__media-wrapper small-hide">
           <media-gallery
             id="MediaGallery-{{ section.id }}-right"
@@ -482,7 +482,7 @@
             {%- endif -%}
           </media-gallery>
         </div>
-      {%- endif -%}
+      {%- endif -%} {%- endcomment -%}
     </div>
     <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
       <div
