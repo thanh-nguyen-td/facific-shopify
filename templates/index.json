@@ -156,27 +156,10 @@
     },
     "ed5441f7-9281-44e3-a7bc-a69c905cfbf4": {
       "type": "section-banner",
-      "blocks": {
-        "0060b034-49ef-4cd0-9215-7920ef5db7c6": {
-          "type": "text",
-          "settings": {
-            "des": "<p>This is Des<\/p>"
-          }
-        },
-        "c05e67d6-130a-4022-ab0c-ea0782518f62": {
-          "type": "text",
-          "settings": {
-            "des": "<p>1221 Broad Street<br\/>Open Sundays: 12 - 5<br\/>+1 (250) 555-5555<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "0060b034-49ef-4cd0-9215-7920ef5db7c6",
-        "c05e67d6-130a-4022-ab0c-ea0782518f62"
-      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/map_960x600_crop_center_043fa208-095d-4622-a7b8-150fec714548.jpg",
-        "title": "WORKSHOP"
+        "title": "WORKSHOP",
+        "des": "<p>1221 Broad Street<br\/>Open Sundays: 12 - 5<br\/>+1 (250) 555-5555<\/p>"
       }
     }
   },
