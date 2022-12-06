@@ -1,10 +1,88 @@
-<div>
+{% style %}
+.custom-video {
+    position:relative;
+}
+.custom-video img {
+    width:100%
+}
+.custom-video_content {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center
+}
+.custom-video_content p {
+    font-size:12px;
+    font-weight:500;
+    text-transform: uppercase;
+    color:var(--color-white);
+    margin-left:20px;
+    font-family:var(--font-family-1)
+}
+.wrap-triangle {
+    height: 30px; 
+    width:30px; 
+    border:2px solid #fff; 
+    border-radius:50%; 
+    display:flex; 
+    justify-content:center; 
+    align-items:center
+}
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 10px solid #fff;
+  border-bottom: 5px solid transparent;
+  color:transparent;
+  margin-left:2px
+}
+.video__overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background:rgba(0,0,0,0.5);
+    
+    justify-content:center;
+    align-items:center;
+    z-index:20;
+    display:none
+}
+{% endstyle %}
+<div class=" page-width">
+   <div class="custom-video">
     <img src="https://cdn.shopify.com/s/files/1/0691/4749/files/mill_87a06a5a-6570-43c5-946f-02db0a85aa51_1708x854.jpg?v=1613538904"/>
-    <div>
-        <iframe src="https://player.vimeo.com/video/771124484?h=c3a6904a82" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/771124484">Finding Hetch Hetchy: The Hidden Yosemite</a> from <a href="https://vimeo.com/user6200483">Restore Hetch Hetchy</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+    <div class="custom-video_content">
+        <div class="wrap-triangle">
+            <div class="triangle-right">T</div>
+        </div>
+        <p>watch the video</p>
     </div>
+    <div class="video__overlay">
+        <iframe src="https://player.vimeo.com/video/771124484?h=c3a6904a82" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+   </div>
 </div>
+
+<script>
+    var modal = document.querySelector(".video__overlay");
+    window.addEventListener('click',closeModal )
+    function closeModal (e) {
+        if(e.target == modal ){
+            modal.style.display = 'none'
+        }
+       
+    }
+
+</script>
+
 {% schema %}
 {
     "name":"Section video",
@@ -15,18 +93,6 @@
         "default": "QUALITY CRAFTSMANSHIP",
         "label": "Title"
       },
-    //   {
-    //   "type": "video_url",
-    //   "id": "video_url",
-    //   "accept": [
-    //     "youtube",
-    //     "vimeo"
-    //   ],
-    //   "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-    //   "label": "t:sections.video.settings.video_url.label",
-    //   "placeholder": "t:sections.video.settings.video_url.placeholder",
-    //   "info": "t:sections.video.settings.video_url.info"
-    // },
       {
       "type": "image_picker",
       "id": "image",
