@@ -1,7 +1,8 @@
 {% style %}
     .banber-container{
        position:relative;
-       margin-top:4rem
+       margin-top:5rem;
+       margin-bottom:4rem
     }
     .banber-container img {
         width:100%;
@@ -21,16 +22,28 @@
         align-items:center
     }
     .banner__content-child {
-        background:red;
+        background:var(--color-white-bg);
         max-width:540px;
-        padding:20px
+        padding:20px;
+    }
+    .banner__content-child p {
+        color:var(--color-balck);
+        font-family:var(--font-family-3);
+    }
+    .banner__content-child a{
+        color:var(--color-orange);
+        font-family:var(--font-family-3);
     }
     .banner__content h2 {
         font-size:4.1rem;
         font-weight:700;
         text-transform:uppercase;
         font-family:var(--font-family-1);
-        color:var(--color-white)
+        color:var(--color-black)
+    }
+    .banner-info p {
+        color:var(--color-black);
+        font-family:var(--font-family-3);
     }
 {% endstyle %}
 <div class="page-width">
@@ -46,14 +59,12 @@
             <div class="banner__content-child">
                 <h2>WORKSHOP</h2>
                 <p>
-                    This is a demo store. Thanks to the folks over at S.E.H Kelly for allowing us
+                    This is a demo store. Thanks to the folks over at <a>S.E.H Kelly</a> for allowing us
                     to use their wonderful imagery in this demo store. Head over to their 
-                    website to shop these pieces for real.
+                    website to <a>shop</a> these pieces for real.
                 </p>
                 <div class="banner-info">
-                    <div style="color:#fff">
-                        {{ section.settings.des }}
-                    </div>
+                    {{ section.settings.des }}
                 </div>
             </div>
         </div>

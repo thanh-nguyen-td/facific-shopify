@@ -256,7 +256,8 @@
       {{ content_for_layout }}
     </main>
 
-    {% section 'footer' %}
+    {%- comment -%} {% section 'footer' %} {%- endcomment -%}
+    {% section 'custom-footer' %}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>

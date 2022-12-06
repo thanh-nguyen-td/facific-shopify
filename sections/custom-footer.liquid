@@ -1,0 +1,76 @@
+<div class="custom-footer">
+    footer
+    {% for block in section.blocks %}
+        {% case block.type %}
+            {% when "link_list" %}
+                <div>Link list</div>
+            {% when "email" %}
+                <div>Email</div>
+            {% when "text" %}
+                <div>Text</div>
+            {% else %}
+        {% endcase %}
+    {% endfor %}
+</div>
+{% schema %}
+{
+    "name":"Custom footer",
+    "blocks":[
+        {
+            "type": "link_list",
+            "name": "t:sections.footer.blocks.link_list.name",
+            "settings": [
+                {
+                "type": "text",
+                "id": "heading",
+                "default": "Quick links",
+                "label": "t:sections.footer.blocks.link_list.settings.heading.label"
+                },
+                {
+                "type": "link_list",
+                "id": "menu",
+                "default": "footer",
+                "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+                "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+                }
+            ]
+        },
+        {
+            "type":"email",
+            "name": "Email",
+            "limit":1,
+            "settings": [
+                {
+                    "type":"text",
+                    "id":"heading",
+                    "default":"Newsletter",
+                    "label":"Heading"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "name": "t:sections.footer.blocks.text.name",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "default": "Heading",
+                    "label": "t:sections.footer.blocks.text.settings.heading.label"
+                },
+                {
+                    "type": "richtext",
+                    "id": "subtext",
+                    "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
+                    "label": "t:sections.footer.blocks.text.settings.subtext.label"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "name":"Custom footer"
+        }
+    ]
+}
+{% endschema %}
