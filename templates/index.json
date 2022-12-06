@@ -147,6 +147,11 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "de9d5cf8-4bab-4c59-ba88-00c1bdf33863": {
+      "type": "section-blog",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -158,6 +163,7 @@
     "9dd01656-1ab2-461e-905c-44e44c765cc4",
     "1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea",
     "3b222a5a-e778-4cc6-b12d-6d7a0e9e8483",
-    "473f5822-3260-41ac-9759-b993014cf4f6"
+    "473f5822-3260-41ac-9759-b993014cf4f6",
+    "de9d5cf8-4bab-4c59-ba88-00c1bdf33863"
   ]
 }
