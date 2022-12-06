@@ -151,6 +151,7 @@
     "de9d5cf8-4bab-4c59-ba88-00c1bdf33863": {
       "type": "section-blog",
       "settings": {
+        "blog": "news"
       }
     }
   },
