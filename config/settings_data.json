@@ -238,6 +238,46 @@
           "logo": "shopify:\/\/shop_images\/logo-windsor_800x182_b20b70fb-9dc5-479b-8f1f-2737b6d7b3e9.webp",
           "logo_width": 100
         }
+      },
+      "custom-footer": {
+        "type": "custom-footer",
+        "blocks": {
+          "7d65e375-4f54-4a91-9e46-7682341b81f5": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "8408ba2d-8bb3-4b35-8c0e-6ded2b85a156": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "1cd83331-006a-4925-94fe-e1028d839647": {
+            "type": "email",
+            "settings": {
+              "heading": "Newsletter"
+            }
+          },
+          "57a7291f-1a37-4bf2-ac04-4819c00f42b6": {
+            "type": "text",
+            "settings": {
+              "heading": "Heading",
+              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "7d65e375-4f54-4a91-9e46-7682341b81f5",
+          "8408ba2d-8bb3-4b35-8c0e-6ded2b85a156",
+          "1cd83331-006a-4925-94fe-e1028d839647",
+          "57a7291f-1a37-4bf2-ac04-4819c00f42b6"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
