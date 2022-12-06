@@ -1,3 +1,4 @@
+
 :root {
     --color-announcement-bg: #3d3b32;
     --color-announcement: #e6dec1;
@@ -33,3 +34,75 @@ a {
 .height-full{
     height: 100%;
 }
+/* selecter */
+.custom-select {
+    position: relative;
+    display: inline-block;
+    font-size: 17px;
+    color: var(--color-black);
+    margin-top: 25px;
+    font-weight: 700;
+    font-family: var(--font-family-3);
+    margin: auto 10px;
+  }
+  
+  .custom-select select {
+    display: block;
+    width: 287px;
+    min-height: 43px;
+    border-radius: 3px;
+    outline: none;
+    padding: 0 20px 0 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    appearance: none;
+    font-family: var(--font-family-2);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    box-shadow: none;
+    font-size: 17px;
+    font-weight: 300;
+    border-color:var(--color-border)
+  }
+  
+  .custom-select::after {
+    content: '';
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: var(--color-border);
+    display: inline-block;
+    border-radius: 2px;
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+  }
+  
+  .custom-select .selector-options {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    background: #11436b;
+    color: #fff;
+    border-radius: 4px;
+    z-index: 1;
+    width: 96%;
+    position: absolute;
+    left: 2%;
+    top: 35%;
+    font-size: 20px;
+  }
+  
+  .custom-select .selector-options li {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .custom-select .selector-options li:hover {
+    background: #03A9F4;
+  }
