@@ -58,6 +58,71 @@
       "settings": {
         "title": "QUALITY CRAFTSMANSHIP"
       }
+    },
+    "1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea": {
+      "type": "featured-product",
+      "blocks": {
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-0": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-2": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-3": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-4": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-5": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-6": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-0",
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-1",
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-2",
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-3",
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-4",
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-5",
+        "template--15023887155223__1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea-1670294744d6c612f9-6"
+      ],
+      "settings": {
+        "product": "bugatti",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_position": "left",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -66,6 +131,7 @@
     "df99977e-a947-4686-8136-f393c70a3887",
     "48c62518-5207-454e-8309-4efd7b387c3d",
     "f51a877e-9e36-428c-8606-9efc68af63ae",
-    "9dd01656-1ab2-461e-905c-44e44c765cc4"
+    "9dd01656-1ab2-461e-905c-44e44c765cc4",
+    "1aa4c3e6-d219-45c2-8d5b-7d1cd9dc73ea"
   ]
 }
