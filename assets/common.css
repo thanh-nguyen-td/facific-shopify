@@ -36,6 +36,9 @@ a {
 .height-full{
     height: 100%;
 }
+.page-container {
+    margin:auto 4rem
+}
 /* selecter */
 .custom-select {
     position: relative;
@@ -107,4 +110,5 @@ a {
   
   .custom-select .selector-options li:hover {
     background: #03A9F4;
+
   }

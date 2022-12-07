@@ -27,9 +27,9 @@
         color:var(--color-white)
     }
 {% endstyle %}
-<div class="banber-container">
+<div class="banber-container {% unless section.settings.is_full_width %} page-container {% endunless %}">
     <img
-        src="https://znews-photo.zingcdn.me/w660/Uploaded/kbd_bcvi/2019_11_23/5d828de46f24eb2ed3491582_1.jpg"
+        src="{{section.settings.image | img_url:'large'}}"
         width="auto"
         height="auto"
         loading="lazy"
@@ -37,7 +37,7 @@
   
     <div class="banner__content ">
         <div class="page-width">
-            <h2>GARMENTS THAT STAND THE TEST OF TIME BY DESIGN, BY QUALITY, AND BY VALUE.</h2>
+            <h2>{{ section.settings.title }}</h2>
         </div>
     </div>
 </div>
@@ -52,11 +52,18 @@
             "label":"Image"
         },
         {
+            "type":"checkbox",
+            "id":"is_full_width",
+            "label":"Full width",
+            "default":true
+        },
+        {
             "type":"text",
             "id":"title",
             "label":"Title",
             "default":"This is Title"
         }
+
     ],
     "presets":[
         {
