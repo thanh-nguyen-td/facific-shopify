@@ -249,13 +249,27 @@
               "title_menu": "Catalog",
               "colection": "car"
             }
+          },
+          "fed75efa-984c-48a8-a88e-b444d0cad408": {
+            "type": "mega_img",
+            "settings": {
+              "title_menu": "Catalog",
+              "select_img": "shopify:\/\/shop_images\/collection-sale_1792x625_7a8d323d-c852-499b-963f-6794016b40e4.webp",
+              "img_lv_one": false,
+              "show_content": true,
+              "img_heading": "",
+              "img_title": "Extra 25% off sale items",
+              "img_button": "",
+              "img_button_url": ""
+            }
           }
         },
         "block_order": [
           "bca3d84b-98a4-4702-9d3e-0638173b31f0",
           "9820acd0-2e48-4da2-bad0-0483c53fdce2",
           "59c31dfc-da35-4195-823a-789420a9db5b",
-          "b03c66f3-cc7b-45b5-acf3-ac6d33441063"
+          "b03c66f3-cc7b-45b5-acf3-ac6d33441063",
+          "fed75efa-984c-48a8-a88e-b444d0cad408"
         ],
         "settings": {
           "menu": "main-menu-fa",
