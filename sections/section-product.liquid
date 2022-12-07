@@ -1,4 +1,7 @@
 {% style %}
+.section-product-container {
+    padding-top:3rem
+}
 .product__heading {
     text-align:center;
     margin-bottom:5rem
@@ -11,18 +14,20 @@
   
 {% endstyle %}
 <div class="page-width">
-<div class="product__heading">
-   <h2> CUSTOMER FAVORITES</h2>
-</div>
-<div class="custom-grid">
-    <div class="custom-row">
-        {% for product in collections[section.settings.collection].products limit: 6 %}
-            <div class="custom-col col-xl-4 col-lg-4 col-md-6 col-sm-6 custom-col-6">
-              {% render 'card-custom-product', product: product %}
+    <div class="section-product-container">
+        <div class="product__heading">
+            <h2> CUSTOMER FAVORITES</h2>
+        </div>
+        <div class="custom-grid">
+            <div class="custom-row">
+                {% for product in collections[section.settings.collection].products limit: 6 %}
+                    <div class="custom-col col-xl-4 col-lg-4 col-md-6 col-sm-6 custom-col-6">
+                    {% render 'card-custom-product', product: product %}
+                    </div>
+                {% endfor %}
             </div>
-        {% endfor %}
-     </div>
-</div>
+        </div>
+    </div>
 </div>
 {% schema %}
     {
