@@ -123,48 +123,7 @@
     <div class="custom-row">
         {% for product in collections[section.settings.collection].products limit: 6 %}
             <div class="custom-col col-xl-4 col-lg-4 col-md-6 col-sm-6 custom-col-6">
-                <div class="product__card" >
-                    <a href="{{product.url}}">
-                        <div class="product__wrap-img" >
-                            <img
-                                srcset="{%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
-                            {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
-                            {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
-                            {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
-                            {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
-                            {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
-                            {{ product.featured_media | image_url }} {{ product.featured_media.width }}w"
-                                src="{{ product.featured_media | img_url: 'large' }}" 
-                                loading="lazy" 
-                                width="{{ product.featured_media.width }}"
-                                height="{{ product.featured_media.height }}"
-                            />
-                            {% if product.compare_at_price != blank %}
-                                <div class="product__wrap-sale">
-                                    <p>Onsale</p>
-                                </div>
-                            {% endif %}
-                            
-                        </div>
-                       
-                        {%- comment -%} <p class="product__card-vendor"> {%- endcomment -%}
-                        <div class="product__card-content">
-                           <p class="product__card-vendor">
-                            {{ product.vendor }}
-                           </p>
-                            <h4>
-                                {{ product.title }}
-                            </h4>
-                            <p  class="product__card-price">
-                                {% if product.compare_at_price > product.price %}
-                                    {{ product.compare_at_price | money_with_currency }}
-                                    {% else %}
-                                    {{product.price | money_with_currency }}
-                                {% endif %}
-                            </p>
-                        </div>
-                    </a>
-                </div>
+              {% render 'card-custom-product', product: product %}
             </div>
         {% endfor %}
      </div>

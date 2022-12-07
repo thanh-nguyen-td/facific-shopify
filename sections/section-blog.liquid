@@ -32,7 +32,7 @@
    <div class="custom-grid">
         <div class="custom-row">
             {% for blog in section.settings.blog.articles limit: 3 %}
-                <div class="custom-col col-xl-4">
+                <div class="custom-col col-xl-4 col-sm-12">
                     <div class="blog-card">
                         <a href="{{ blog.url }}">
                             <h1 class="blog-card__title">{{ blog.title | truncate: 50 | escape }}</h1>
