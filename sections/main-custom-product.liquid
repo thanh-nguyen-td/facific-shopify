@@ -1,9 +1,81 @@
-<div>
+<style>
+    .page-container {
+        margin:auto 4rem
+    }
+    .filter-product{
+        margin-bottom: 5rem;
+    }
+    .filter-product form {
+        display:flex;
+        justify-content: space-between;
+      
+    }
+    .filter-product p {
+        margin: 0;
+        margin-right: 10px;
+        font-size: 17px;
+        font-family:var(font-family-3);
+        font-weight:400;
+        color:var(--color-black)
+    }
+    .filter-product__wrap-item{
+        display: flex;
+        flex-direction:row
+    }
+    .filter-product__item {
+        display:flex; 
+        margin-right: 3rem;
+    }
+</style>
+<div class="page-container">
+    <div class="filter-product">
+        <form class="facets-vertical-form" id="FacetSortForm">
+            <div class="filter-product__wrap-item">
+                <div class="filter-product__item">
+                    <p>Price</p>
+                    <span>
+                        <svg aria-hidden="true" focusable="false" role="presentation" style="height:8px" viewBox="0 0 10 6">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                          </svg>
+                    </span>
+                </div>
+                <div class="filter-product__item">
+                    <p>Product Type</p>
+                    <span>
+                        <svg aria-hidden="true" focusable="false" role="presentation" style="height:8px" viewBox="0 0 10 6">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                          </svg>
+                    </span>
+                </div>
+                <div class="filter-product__item">
+                    <p>Size</p>
+                    <span>
+                        <svg aria-hidden="true" focusable="false" role="presentation" style="height:8px" viewBox="0 0 10 6">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                          </svg>
+                    </span>
+                </div>
+            </div>
+            <div>
+                <div class="filter-product__item">
+                    <p>Sort by: Featured</p>
+                    <span>
+                        <svg aria-hidden="true" focusable="false" role="presentation" style="height:8px" viewBox="0 0 10 6">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                          </svg>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
     <div class="custom-grid">
         <div class="custom-row">
-            <div class="custom-col">
-
-            </div>
+            {%- for product in collection.products -%}
+                <div class="custom-col col-xl-4 col-lg-4 col-md-6 col-sm-6 custom-col-6">
+                    {% render 'card-custom-product', product: product %}
+                  </div>
+            {%- endfor -%}
+          
         </div>
     </div>
 </div>
