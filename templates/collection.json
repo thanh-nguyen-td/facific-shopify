@@ -9,16 +9,17 @@
         "color_scheme": "background-1"
       }
     },
+    "fc6ddd9e-6c47-48f8-ac61-699fe8b5afaa": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
     "f87934d4-0aed-4d85-b640-e44fe12711a4": {
       "type": "banner-img",
       "settings": {
         "image": "shopify:\/\/shop_images\/collection-sale_1792x625_741ea6d5-c077-4b7a-81f5-2b5b8db24ce3.webp",
+        "is_full_width": true,
         "title": "Sale"
-      }
-    },
-    "fc6ddd9e-6c47-48f8-ac61-699fe8b5afaa": {
-      "type": "breadcrumbs",
-      "settings": {
       }
     },
     "product-grid": {
@@ -29,8 +30,8 @@
   },
   "order": [
     "banner",
-    "f87934d4-0aed-4d85-b640-e44fe12711a4",
     "fc6ddd9e-6c47-48f8-ac61-699fe8b5afaa",
+    "f87934d4-0aed-4d85-b640-e44fe12711a4",
     "product-grid"
   ]
 }
