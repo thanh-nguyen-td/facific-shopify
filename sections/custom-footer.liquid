@@ -1,16 +1,155 @@
-<div class="custom-footer">
-    footer
-    {% for block in section.blocks %}
-        {% case block.type %}
-            {% when "link_list" %}
-                <div>Link list</div>
-            {% when "email" %}
-                <div>Email</div>
-            {% when "text" %}
-                <div>Text</div>
-            {% else %}
-        {% endcase %}
-    {% endfor %}
+{% style %}
+    .footer__heading {
+        color:var(--color-black);
+        font-family:var(--font-family-1);
+        font-size:12px;
+        font-weight:500;
+        text-transform:uppercase
+    }
+    .footer-menu ul {
+        list-style-type:none;
+        padding:0
+    }
+    .footer-menu li a {
+        color:var(--color-black);
+        font-family:var(--font-family-3);
+        font-size:17px;
+        font-weight:400
+    }
+    .footer-text p{
+        color:var(--color-black);
+        font-family:var(--font-family-3);
+        font-size:17px;
+        font-weight:400
+    }
+    .footer-text a{
+        color:var(--color-orange);
+        font-family:var(--font-family-3);
+        font-size:17px;
+        font-weight:400
+    }
+    .footer-email .custom-input{
+        height:40px;
+        border:1px solid var(--color-border); 
+        display:flex;
+        border-radius:3px
+    }
+    .footer-email .custom-input input {
+        border:0;
+        padding-left:10px;
+        width:100%;
+        font-family:var(--font-family-3);
+        font-size:17px;
+        font-weight:400
+    }
+    .footer-email .custom-input input:focus-visible {
+        border:0 ;
+        outline:none;
+        outline-offset:0;
+        box-shadow:none
+    }
+    .footer-email .no-outline:focus {
+  outline: none;
+    }
+
+    .custom-input button {
+        border:0;
+        background:var(--color-white);
+        color:#999;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        cursor: pointer;
+    }
+{% endstyle %}
+<div class="page-width">
+    <div class="custom-footer">
+        footer
+        <div class="custom-grid">
+            <div class="custom-row">
+                {% for block in section.blocks %}
+                    
+                    {% assign items = block.settings %}
+                    {% case block.type %}
+                        {% when "link_list" %}
+                            <div class="footer-menu custom-col col-xl-2">
+                                {%- if block.settings.heading != blank -%}
+                                    <h2 class="footer__heading">{{- block.settings.heading | escape -}}</h2>
+                                  {%- endif -%}
+                                <ul>
+                                    {% for item in items.menu.links %}
+                                       <li>
+                                        <a href="item.url">{{ item.title }}</a>
+                                       </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% when "email" %}
+                            <div class="footer-email custom-col  col-xl-4">
+                                {%- if block.settings.heading != blank -%}
+                                    <h2 class="footer__heading">{{- block.settings.heading | escape -}}</h2>
+                                  {%- endif -%}
+                                <div>
+                                    {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
+                                        <input type="hidden" name="contact[tags]" value="newsletter">
+                                        <div class="newsletter-form__field-wrapper">
+                                            <div class="custom-input">
+                                                <input
+                                                    type="email"
+                                                    placeholder="your@email.com"
+                                                    value="{{ form.email }}"
+                                                    aria-required="true"
+                                                    autocorrect="off"
+                                                    autocapitalize="off"
+                                                    autocomplete="email"
+                                                    id="NewsletterForm--{{ section.id }}"
+                                                    {% if form.errors %}
+                                                        autofocus
+                                                        aria-invalid="true"
+                                                        aria-describedby="ContactFooter-error"
+                                                      {% elsif form.posted_successfully? %}
+                                                        aria-describedby="ContactFooter-success"
+                                                      {% endif %}
+                                                      placeholder="{{ 'newsletter.label' | t }}"
+                                                      required
+                                                />
+                                                <button>
+                                                    <svg class="svg-icon icon-mail " xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33335 3.33337H16.6667C17.5834 3.33337 18.3334 4.08337 18.3334 5.00004V15C18.3334 15.9167 17.5834 16.6667 16.6667 16.6667H3.33335C2.41669 16.6667 1.66669 15.9167 1.66669 15V5.00004C1.66669 4.08337 2.41669 3.33337 3.33335 3.33337Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M18.3334 5L10 10.8333L1.66669 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                      </svg>
+                                                </button>
+                                            </div>
+                                          {%- if form.errors -%}
+                                            <small class="newsletter-form__message form__message" id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                                          {%- endif -%}
+                                        </div>
+                                        {%- if form.posted_successfully? -%}
+                                          <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+                                        {%- endif -%}
+                                      {%- endform -%}
+                                </div>
+                                </div>
+                        {% when "text" %}
+                            <div class="footer-text custom-col  col-xl-4">
+                                {%- if block.settings.heading != blank -%}
+                                    <h2 class="footer__heading">{{- block.settings.heading | escape -}}</h2>
+                                  {%- endif -%}
+                                  <div>
+                                    <p>
+                                        This is a demo store! Massive thanks to the fine folks over at 
+                                        <a href="#">S.E.H Kelly</a>
+                                        for allowing us to use their wonderful content here. Head over to their site to shop these pieces for real.
+                                    </p>
+                                  </div>
+                                </div>
+                        {% else %}
+                    {% endcase %}
+                {% endfor %}
+            </div>
+        </div>
+        
+    </div>
 </div>
 {% schema %}
 {
@@ -43,7 +182,7 @@
                 {
                     "type":"text",
                     "id":"heading",
-                    "default":"Newsletter",
+                    "default":"Email",
                     "label":"Heading"
                 }
             ]
