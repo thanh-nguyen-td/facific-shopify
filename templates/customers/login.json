@@ -1,5 +1,10 @@
 {
   "sections": {
+    "f3f76f4f-7f6b-4d50-8ba9-467f97fd39d9": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-login",
       "settings": {
@@ -9,6 +14,7 @@
     }
   },
   "order": [
+    "f3f76f4f-7f6b-4d50-8ba9-467f97fd39d9",
     "main"
   ]
 }
