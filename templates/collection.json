@@ -2,27 +2,34 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
         "color_scheme": "background-1"
       }
     },
-    "product-grid": {
-      "type": "main-custom-product",
+    "f87934d4-0aed-4d85-b640-e44fe12711a4": {
+      "type": "banner-img",
       "settings": {
-       
+        "title": "This is Title"
       }
     },
     "fc6ddd9e-6c47-48f8-ac61-699fe8b5afaa": {
       "type": "breadcrumbs",
       "settings": {
       }
+    },
+    "product-grid": {
+      "type": "main-custom-product",
+      "settings": {
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid",
-    "fc6ddd9e-6c47-48f8-ac61-699fe8b5afaa"
+    "f87934d4-0aed-4d85-b640-e44fe12711a4",
+    "fc6ddd9e-6c47-48f8-ac61-699fe8b5afaa",
+    "product-grid"
   ]
 }
