@@ -178,7 +178,7 @@ nav .head-container {
     display: none;
 }
 .head-menu-container .fa-xmark {
-    color: #999;
+    color: var(--color-head-icon);
     font-size: 20px;
     cursor: pointer;
     position: absolute;
