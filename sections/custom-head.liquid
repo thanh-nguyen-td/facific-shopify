@@ -61,11 +61,15 @@
                     {% case type %}
                         {% when "dropdown" %}
                             <li style="position: relative;">
-                                {% if link.title == "FEATURES" %}
-                                    {% render 'ticker', content: 'HOT!', color: '#CD0004' %}
-                                {% endif %}
-                                
-                                <a href="{{ link.url }}" class="head-menu__desktop-item">{{ link.title | upcase }}</a>
+                                <a href="{{ link.url }}" class="head-menu__desktop-item">{{ link.title | upcase }}
+                                    {% if link.links.length > 0 %}
+                                        <span class="head-menu__icon-caret">
+                                            <svg aria-hidden="true" focusable="false" role="presentation" style="height:100%; width:1em" viewBox="0 0 10 6">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                                          </svg>
+                                        </span>
+                                    {% endif %}
+                                </a>
                                 <input type="checkbox" id="showMenuDrop{{ forloop.index }}" class="showMenuDrop"/>
                                 <label for="showMenuDrop{{ forloop.index }}" class="head-menu__mobile-item">{{ link.title | upcase }}</label>
                                 <ul class="head-menu__drop head-menu__shadown">
@@ -76,9 +80,24 @@
                             </li>
                         {% when "mega_menu" %}
                             <li >
-                                <a href="{{ link.url }}" class="head-menu__desktop-item">{{ link.title | upcase }}</a>
+                                <a class="head-menu__desktop-item">
+                                    {{ link.title | upcase }}
+                                    <span class="head-menu__icon-caret">
+                                        <svg aria-hidden="true" focusable="false" role="presentation" style="height:100%; width:1em" viewBox="0 0 10 6">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                                      </svg>
+                                    </span>
+                                </a>
                                 <input type="checkbox" id="showMenuMega{{ forloop.index }}" class="showMenuMega"/>
-                                <label for="showMenuMega{{ forloop.index }}" class="head-menu__mobile-item">{{ link.title | upcase }}</label>
+                                <label for="showMenuMega{{ forloop.index }}" class="head-menu__mobile-item">
+                                    {{ link.title | upcase }}
+                                    <span class="head-menu__icon-caret">
+                                        <svg aria-hidden="true" focusable="false" role="presentation" style="height:100%; width:1em" viewBox="0 0 10 6">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                                      </svg>
+                                    </span>
+                                </label>
+                                
                                 <div class="head-menu__mega-box head-menu__shadown">
                                     {%- comment -%} mage image lever 1 {%- endcomment -%}
                                     {% for block in section.blocks %}
@@ -126,7 +145,7 @@
                                                     {% unless block.settings.img_lv_one %}
                                                         <div class="head-menu__row">
                                                             <div class="head-menu__mega-img" style="position:relative">
-                                                                <img style="widht:100%" src="{{block.settings.select_img | img_url: 'large'}}" alt="" width="auto" height="auto" loading="lazy">
+                                                                <img style="widht:100%;height:100%" src="{{block.settings.select_img | img_url: 'large'}}" alt="" width="auto" height="auto" loading="lazy">
                                                                 {% if block.settings.show_content %}
                                                                     <div class="head__img-wrap-content custom_center" style="font-size: 13px;">
                                                                         {% if block.settings.img_heading != blank %}
@@ -152,7 +171,7 @@
                                                              <img src="{{ block.settings.colection.image | img_url:'large'}}" width="auto" height="auto" loading="lazy"/> 
                                                         </div> {%- endcomment -%}
                                                         <div>
-                                                            <h2 class="head-menu__title-collection">{{block.settings.colection.title}}</h2>
+                                                            <h2 class="head-menu__title-collection">{{ block.settings.colection.title }}</h2>
                                                         </div>
                                                         <ul class="head-menu__mega-links"  style="margin-top: 10px;">
                                                             {% for item in block.settings.colection.products limit: 4 %}

@@ -61,6 +61,12 @@ nav .head-container {
 .head-container li {
     list-style: none;
 }
+.menu-close-icon ~ li,
+.menu-close-icon ~ li > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .head-container li a {
     color:var(--color-head-text);
     text-decoration: none;
@@ -73,11 +79,13 @@ nav .head-container {
 .head-container li a:hover {
     color: var(--color-head-text-hover);
 }
+.head-menu__icon-caret {
+    margin-left: 10px;
+}
 /* dropdown menu */
 .head-menu .head-menu__drop {
     background: var(--color-head-child-bg);
     top:  90px;
-    /* top:  90px; */
     position: absolute;
     min-width: 180px;
     line-height: 45px;
@@ -123,9 +131,8 @@ nav .head-container {
 }
 .head-menu__mega-content .head-menu__row {
     width: 100%;
-    border-left:1px solid #cccccc80;
     line-height: 45px;
-    padding:20px 40px;
+    padding:0px 20px;
 }
 .head-menu__mega-content .head-menu__row:nth-child(1){
     border-left: 0;
@@ -212,22 +219,7 @@ nav .head-container {
 .head-icon-group-mobile {
     display: none;
 }
-/* 
-.head_item-icon svg {
-    margin-bottom: 5px;
-    
-} */
-.header-tools-cart-icon{
-    /* content: "";
-    position: absolute;
-    top: -3px;
-    right: -4px;
-    width: 9px;
-    height: 9px;
-    border: 2px solid #222222;
-    background: #d66a25;
-    border-radius: 50%; */
-}
+
 @media screen and (max-width:1200px) {
     nav .head-container {
         display: block;
@@ -359,20 +351,12 @@ nav .head-container {
         font-weight: 400;
         color:#999
     }
-    .head-menu .head-menu__mobile-item {
-        display: block;
-        font-size: 14px;
-        font-weight: 600;
-        color:#999;
-        padding: 20px;
-        cursor:pointer;
-        
-    }
+ 
     .head-menu .head-menu__desktop-item {
         display: none;
     }
     .head-menu .head-menu__mobile-item {
-        display: block;
+        display: flex;
         font-size: 14px;
         font-weight: 600;
         color:#999;
@@ -381,6 +365,7 @@ nav .head-container {
         padding: 0;
         padding-left: 20px;
         border-bottom:1px solid rgba(0, 0, 0, 0.15);
+        justify-content: space-between;
     }
     .head-menu .head-menu__mobile-item:hover{
        color: #fff;
