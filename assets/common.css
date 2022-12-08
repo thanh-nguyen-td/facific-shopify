@@ -21,7 +21,7 @@
 
     --font-family-1:"Futura";
     --font-family-2:"Open-Sans-Condensed";
-    --font-family-3:"ITC Berkeley Old Style";
+    --font-family-3:{{ settings.type_font_2 }};
 }
 a {
     text-decoration: none;
