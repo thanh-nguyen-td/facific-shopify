@@ -101,6 +101,24 @@
         "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
       {
+        "type": "font_picker",
+        "id": "type_header_font_1",
+        "default": "assistant_n4",
+        "label": "Font 1"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_header_font_2",
+        "default": "assistant_n4",
+        "label": "Font 2"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_header_font_3",
+        "default": "assistant_n4",
+        "label": "Font 3"
+      },
+      {
         "type": "range",
         "id": "heading_scale",
         "min": 100,

@@ -63,3 +63,9 @@
     font-family: var(--font-family-3);
     font-weight: 400;
 }
+
+@media screen and (max-width:1200px) {
+    .custom-blog {
+        padding: 20px;
+    }
+}
