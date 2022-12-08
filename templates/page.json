@@ -4,11 +4,18 @@
       "type": "main-page",
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 0
+      }
+    },
+    "30e87635-bdb3-4c11-afdf-1ee1a6cd5715": {
+      "type": "section-video",
+      "settings": {
+        "title": "QUALITY CRAFTSMANSHIP"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "30e87635-bdb3-4c11-afdf-1ee1a6cd5715"
   ]
 }
