@@ -3,60 +3,63 @@
     align-items:center;
     flex-direction: column;
 }
-    .custom-blog .subscribe a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .custom-blog .subscribe span {
-        margin-left: 4px;
-    }
-    .width-blog {
-        max-width:1033px
-    }
-    .custom-blog .custom-col {
-        border-top:1px solid var(--color-border);
-    }
-    .custom-blog .custom-col:first-child {
-        border-top:0;
-    }
-    .card-custom__blog {
-        padding-top: 4rem;
-        padding-bottom: 5rem;
-    }
-    .card-blog__top {
-        margin-bottom: 20px;
-    }
-    .card-blog__title {
-        font-size:25px;
-        font-weight:700;
-        font-family:var(--font-family-1);
-        text-transform:uppercase;
-        color:var(--color-black)
-    }
-    .card-blog__date {
-        font-size:12px;
-        font-weight:400;
-        font-family:var(--font-family-1);
-        text-transform:uppercase;
-        color:var(--color-black);
-        margin: 5px auto;
-    }
+.custom-blog > h1 {
+    margin-top: 0;
+}
+.custom-blog .subscribe a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-blog .subscribe span {
+    margin-left: 4px;
+}
+.width-blog {
+    max-width:1033px
+}
+.custom-blog .custom-col {
+    border-top:1px solid var(--color-border);
+}
+.custom-blog .custom-col:first-child {
+    border-top:0;
+}
+.card-custom__blog {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+}
+.card-blog__top {
+    margin-bottom: 20px;
+}
+.card-blog__title {
+    font-size:25px;
+    font-weight:700;
+    font-family:var(--font-family-1);
+    text-transform:uppercase;
+    color:var(--color-black)
+}
+.card-blog__date {
+    font-size:12px;
+    font-weight:400;
+    font-family:var(--font-family-1);
+    text-transform:uppercase;
+    color:var(--color-black);
+    margin: 5px auto;
+}
 
-    .card-blog__body {
-        padding:0 3rem
-    }
-    .card-blog__img{
-        width:100%; 
-        height:auto
-    }
+.card-blog__body {
+    padding:0 3rem
+}
+.card-blog__img{
+    width:100%; 
+    height:auto
+}
 
-    .card-blog__read-more {
-        margin-top: 4rem;
-    }
-    .card-blog__read-more a {
-        color:var(--color-orange);
-        font-size: 17px;
-        font-family: var(--font-family-3);
-        font-weight: 400;
-    }
+.card-blog__read-more {
+    margin-top: 4rem;
+}
+.card-blog__read-more a {
+    color:var(--color-orange);
+    font-size: 17px;
+    font-family: var(--font-family-3);
+    font-weight: 400;
+}
