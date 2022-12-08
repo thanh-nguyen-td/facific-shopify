@@ -1,5 +1,67 @@
-<div>
-    thanh kaka
+{{ "main-custom-blog.css" | asset_url | stylesheet_tag }}
+
+<div class="custom-blog">
+    <h1 class="title-page">{{ blog.title }}</h1>
+    <div class="subscribe">
+        <a href="#" class="text-base">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="-4 -4 24 24" class="iconify iconify--jam"><path fill="currentColor" d="M1.996 15.97a1.996 1.996 0 1 1 0-3.992a1.996 1.996 0 0 1 0 3.992zM1.12 7.977a.998.998 0 0 1-.247-1.98a8.103 8.103 0 0 1 9.108 8.04v.935a.998.998 0 1 1-1.996 0v-.934a6.108 6.108 0 0 0-6.865-6.06zM0 1.065A.998.998 0 0 1 .93.002C8.717-.517 15.448 5.374 15.967 13.16c.042.626.042 1.254 0 1.88a.998.998 0 1 1-1.992-.133c.036-.538.036-1.077 0-1.614C13.53 6.607 7.75 1.548 1.065 1.994A.998.998 0 0 1 0 1.064z"></path></svg>
+            Subscribe
+        </a>
+    </div>
+    <div class="custom-grid width-blog">
+        <div class="custom-row">
+            {%- for article in blog.articles -%}
+                <div class="custom-col col-xl-12">
+                    <div class="card-custom__blog">
+                        <div class="card-blog__top">
+                            <p class="card-blog__date">{{ article.published_at | time_tag: format: 'date' }}</p>
+                            <a href="{{ article.url }}" class="card-blog__title" >
+                                {{ article.title | truncate: 50 | escape }}
+                            </a>
+                        </div>
+                        <div class="card-blog__body">
+                            {% if article.image.src != blank %}
+                                <img
+                                    srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                                        {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                                        {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                                        {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                                        {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                                        {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                        {{ article.image.src | image_url }} {{ article.image.src.width }}w"
+                                    src="{{ article.image.src | image_url: width: 533 }}"
+                                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                                    alt="{{ article.image.src.alt | escape }}"
+                                    loading="lazy"
+                                    width="{{ article.image.width }}"
+                                    height="{{ article.image.height }}"
+                                    class="card-blog__img"
+                                    >
+                            {% else %}
+                                <div style="border:1px solid #999">
+                                    {{ 'image' | placeholder_svg_tag: 'card-blog__img' }}  
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="card-blog__bot">
+                            {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+                                <p class="text-base">
+                                  {%- if article.excerpt.size > 0 -%}
+                                    {{ article.excerpt | strip_html | truncatewords: 30 }}
+                                  {%- else -%}
+                                    {{ article.content | strip_html | truncatewords: 30 }}
+                                  {%- endif -%}
+                                </p>
+                            {%- endif -%}
+                            <div class="card-blog__read-more">
+                                <a href="{{ article.url }}">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
 </div>
 {% schema %}
 {

@@ -26,8 +26,17 @@
 a {
     text-decoration: none;
 }
-.title-lg {
-    font-size: 19px;
+.title-page {
+    font-size: 33px;
+    font-family: var(--font-family-1);
+    color: var(--color-black);
+    font-weight: 700;
+}
+.text-base {
+    font-size: 17px;
+    font-family: var(--font-family-3);
+    font-weight: 400;
+    color: var(--color-black-100);
 }
 
 .width-full{
