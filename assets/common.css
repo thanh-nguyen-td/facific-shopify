@@ -19,9 +19,9 @@
     --font-sm:14px;
     --font-base:17px;
 
-    --font-family-1:"Futura";
+    /* --font-family-1:"Futura";
     --font-family-2:"Open-Sans-Condensed";
-    --font-family-3:{{ settings.type_font_3 }};
+    --font-family-3:"ITC Berkeley Old Style"; */
 }
 a {
     text-decoration: none;
