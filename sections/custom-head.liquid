@@ -129,9 +129,15 @@
                                                                 <img style="widht:100%" src="{{block.settings.select_img | img_url: 'large'}}" alt="" width="auto" height="auto" loading="lazy">
                                                                 {% if block.settings.show_content %}
                                                                     <div class="head__img-wrap-content custom_center" style="font-size: 13px;">
-                                                                        <h4 class="head-menu__mega-title-top head-menu__text-img">{{ block.settings.img_heading }}</h4>
-                                                                        <h3 class="head-menu__mega-title head-menu__text-img">{{ block.settings.img_title }}</h3>
-                                                                        <button>{{block.settings.img_button}}</button>
+                                                                        {% if block.settings.img_heading != blank %}
+                                                                            <h4 class="head-menu__mega-title-top head-menu__text-img">{{ block.settings.img_heading }}</h4>
+                                                                        {% endif %}
+                                                                        {% if block.settings.img_title != blank %}
+                                                                            <h3 class="head-menu__mega-title head-menu__text-img">{{ block.settings.img_title }}</h3>
+                                                                        {% endif %}
+                                                                        {% if block.settings.img_button != blank %}
+                                                                            <button>{{block.settings.img_button}}</button>
+                                                                        {% endif %}
                                                                     </div>
                                                                 {% endif %}
                                                             </div>
@@ -142,13 +148,16 @@
                                                 {%- comment -%} mega colection {%- endcomment -%}
                                                 {% if blockTitle == linkTitle %}
                                                     <div class="head-menu__row">
-                                                        <div>
+                                                        {%- comment -%} <div>
                                                              <img src="{{ block.settings.colection.image | img_url:'large'}}" width="auto" height="auto" loading="lazy"/> 
+                                                        </div> {%- endcomment -%}
+                                                        <div>
+                                                            <h2 class="head-menu__title-collection">{{block.settings.colection.title}}</h2>
                                                         </div>
                                                         <ul class="head-menu__mega-links"  style="margin-top: 10px;">
-                                                            {% for item in block.settings.colection.products limit: 7 %}
+                                                            {% for item in block.settings.colection.products limit: 4 %}
                                                                 <li>
-                                                                    <a href="{{item.url}}">{{item.title}}</a>
+                                                                    <a href="{{ item.url }}">{{ item.title }}</a>
                                                                 </li>
                                                             {% endfor %}
                                                         </ul>
