@@ -102,19 +102,19 @@
       },
       {
         "type": "font_picker",
-        "id": "type_header_font_1",
+        "id": "type_font_1",
         "default": "assistant_n4",
         "label": "Font 1"
       },
       {
         "type": "font_picker",
-        "id": "type_header_font_2",
+        "id": "type_font_2",
         "default": "assistant_n4",
         "label": "Font 2"
       },
       {
         "type": "font_picker",
-        "id": "type_header_font_3",
+        "id": "type_font_3",
         "default": "assistant_n4",
         "label": "Font 3"
       },
