@@ -12,10 +12,17 @@
       "settings": {
         "title": "QUALITY CRAFTSMANSHIP"
       }
+    },
+    "fb362cd7-6784-4bf7-adc1-0c31508b82b1": {
+      "type": "section-blog",
+      "settings": {
+        "blog": "news"
+      }
     }
   },
   "order": [
     "main",
-    "30e87635-bdb3-4c11-afdf-1ee1a6cd5715"
+    "30e87635-bdb3-4c11-afdf-1ee1a6cd5715",
+    "fb362cd7-6784-4bf7-adc1-0c31508b82b1"
   ]
 }
