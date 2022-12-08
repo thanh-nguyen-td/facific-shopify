@@ -21,7 +21,7 @@
 
     --font-family-1:"Futura";
     --font-family-2:"Open-Sans-Condensed";
-    --font-family-3:{{ settings.type_font_2 }};
+    --font-family-3:{{ settings.type_font_3 }};
 }
 a {
     text-decoration: none;
